@@ -1,0 +1,9 @@
+# PlatformIO
+.pio/
+
+# VS Code
+.vscode/
+
+# Build files
+*.bin
+*.elf

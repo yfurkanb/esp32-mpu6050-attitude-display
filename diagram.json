@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "ERESENSE-demo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -6.3, "left": -13.1, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "mpu", "top": -24.98, "left": 261.52, "attrs": {} },
+    { "type": "wokwi-ili9341", "id": "tft", "top": 164, "left": 249.3, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:21", "mpu:SDA", "green", [ "v0" ] ],
+    [ "esp:22", "mpu:SCL", "green", [ "v0" ] ],
+    [ "esp:18", "tft:SCK", "blue", [ "v0" ] ],
+    [ "esp:23", "tft:MOSI", "blue", [ "v0" ] ],
+    [ "esp:19", "tft:MISO", "blue", [ "v0" ] ],
+    [ "esp:5", "tft:CS", "orange", [ "v0" ] ],
+    [ "esp:2", "tft:DC", "orange", [ "v0" ] ],
+    [ "esp:4", "tft:RST", "orange", [ "v0" ] ],
+    [ "esp:3V3", "mpu:VCC", "green", [ "v1.4", "h238.12" ] ],
+    [ "esp:GND.1", "mpu:GND", "black", [ "h0" ] ],
+    [ "esp:D21", "mpu:SDA", "green", [ "h0" ] ],
+    [ "esp:D22", "mpu:SCL", "green", [ "h0" ] ],
+    [ "tft:VCC", "esp:3V3", "red", [ "v0", "h-201.6" ] ],
+    [ "tft:GND", "esp:GND.1", "black", [ "v-9.6", "h-211.2" ] ],
+    [ "tft:SCK", "esp:D18", "green", [ "v0" ] ],
+    [ "tft:MOSI", "esp:D23", "green", [ "v0" ] ],
+    [ "tft:CS", "esp:D5", "green", [ "v0" ] ],
+    [ "esp:D2", "tft:D/C", "green", [ "h55.8", "v346.3", "h192" ] ],
+    [ "tft:RST", "esp:D4", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
